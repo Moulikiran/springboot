@@ -14,14 +14,14 @@ public class GrettingController {
 	@Autowired
 	private Greeting greeting;
 	
-	@CrossOrigin(origins = "https://moulikiran.github.io/demoprofile/")
+	@CrossOrigin(origins = "http://localhost:4200")
 	@GetMapping("/greeting")
 	public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
 		//greeting.setContent(name);
 		return greeting;
 	}
 	
-	@CrossOrigin(origins = "https://moulikiran.github.io/demoprofile/")
+	@CrossOrigin(origins = "http://localhost:4200")
 	@GetMapping("/greeting/selectcomponent")
 	public void dateFromMobile(@RequestParam(value = "name", defaultValue = "World") String name) {
 		greeting.setContent(name);
